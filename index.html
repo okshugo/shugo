@@ -9,73 +9,105 @@
     <link rel="stylesheet" href="main.css">
     <script src="jquery-1.11.2.min.js"></script>
     <style>
-    #tamago {
-        position: absolute;
-        right : 120px;
-        top : 80px;
-    }
-         #sukurannburueggu {
-        position: absolute;
-        right : 480px;
-        top : -20px;
-    }
-        #tekisuto {
-        position: absolute;
-        right : 90px;
-        top : 120px;
-    }
-        .dragon2, .dragon1 {
+        #tamago {
+            position: absolute;
+            right: 120px;
+            top: 80px;
+        }
+        
+        #sukurannburueggu {
+            position: absolute;
+            right: 480px;
+            top: -20px;
+        }
+        
+        #nama {
+            position: absolute;
+            right: 550px;
+            top: 150px;
+        }
+        
+        .tekisuto {
+            position: absolute;
+            right: 90px;
+            top: 120px;
+        }
+        
+        .dragon2,
+        .dragon1,
+        .dragon3 {
             position: absolute;
             display: none;
         }
     </style>
 </head>
+
 <body>
     <img src="image/Untitled.png" alt="" width="600">
     <div id="tamago">
-    <a href="javascript:;" id="botann">
-         <img class="dragon2" src="image/dragon2.png" alt="" >
-    <img src="image/pic_index.png" alt="" width="200" id="img">
-    </a>
-    <div id="tekisuto">ゲーム
-        
-    </div>
+        <a href="javascript:;" id="botann">
+            <img class="dragon2" src="image/dragon2.png" alt="">
+            <img src="image/pic_index.png" alt="" width="200" id="img">
+        </a>
+        <div class="tekisuto">ゲーム
+
+        </div>
     </div>
     <div id="sukurannburueggu">
-    <a href="javascript:;" id="suitti">
-    <img class="dragon1" src="image/dragon1.png" alt="" >
-    <img src="image/pic_index.png" alt="" width="200" id="imezi2">
-    </a>
-    <div id="tekisuto">本</div>
+        <a href="javascript:;" id="suitti">
+            <img class="dragon1" src="image/dragon1.png" alt="">
+            <img src="image/pic_index.png" alt="" width="200" id="imezi2">
+        </a>
+        <div class="tekisuto">本</div>
+    </div>
+    <div id="nama">
+        <a href="javascript:;" id="botann2">
+            <img class="dragon3" src="image/dragon3.png" alt="">
+            <img src="image/pic_index.png" alt="" width="200" id="imezi3">
+        </a>
+        <div class="tekisuto">パラパラマンガ</div>
     </div>
     <script>
-    $().ready(function() {
-        $("#botann").click(function() {
-            $("#tamago").animate({
-                top:"400px"
-            }, 1000,function(){
-                $("#img").delay(1000).attr("src","image/wareta_tamago.png");
-                $('.dragon2').css('display','inline');
-                setTimeout(function(){
-                    window.location="game.html";
-                },1000);
-            
-        });
-        });
-         $("#suitti").click(function() {
-            $("#sukurannburueggu").animate({
-                top:"400px"
-            }, 1000,function(){
-               $("#imezi2").delay(1000).attr("src","image/wareta_tamago.png"); 
-            $('.dragon1').css('display','inline');
-                setTimeout(function(){
-                window.location="honn.html";
-                    },1000);
+        $().ready(function () {
+            $("#botann").click(function () {
+                $("#tamago").animate({
+                    top: "400px"
+                }, 1000, function () {
+                    $("#img").delay(1000).attr("src", "image/wareta_tamago.png");
+                    $('.dragon2').css('display', 'inline');
+                    setTimeout(function () {
+                        window.location = "game.html"
+                    }, 1000);
+
+                });
             });
-            
+            $("#suitti").click(function () {
+                $("#sukurannburueggu").animate({
+                    top: "400px"
+                }, 1000, function () {
+                    $("#imezi2").delay(1000).attr("src", "image/wareta_tamago.png");
+                    $('.dragon1').css('display', 'inline');
+                    setTimeout(function () {
+                        window.location = "honn.html";
+                    }, 1000);
+                });
+
+            });
+            $("#botann2").click(function () {
+                $("#nama").animate({
+                    top: "400px"
+                }, 1000, function () {
+                    $("#imezi3").delay(1000).attr("src", "image/wareta_tamago.png");
+                    $('.dragon3').css('display', 'inline');
+                    setTimeout(function () {
+                        window.location = "paraparama.html";
+                    }, 1000);
+                });
+
+            });
+
         });
-    
-    });
     </script>
-    </body>
+</body>
+
 </html>　
