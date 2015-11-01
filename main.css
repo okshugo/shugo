@@ -68,3 +68,8 @@ img {
         filter: grayscale(0%);
     }
 }
+
+
+.center {
+    text-align: center;
+}
